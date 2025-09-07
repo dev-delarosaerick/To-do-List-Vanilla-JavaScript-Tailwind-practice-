@@ -12,28 +12,63 @@
 
     <section class="mt-12 md:flex container mx-auto">
         <div class="md:w-1/2 lg:w-2/5 mx-5">
-            <h1 class="font-black text-3xl text-center">To-do List</h1>
-            <div class="mt-5">
-                <input type="text" id="taskInput" class="border border-gray-300 p-2 w-full" placeholder="Add a new task...">
-                <button id="addTaskButton" class="bg-blue-500 text-white p-2 mt-2 w-full">Add Task</button>
-            </div>
-            <ul id="taskList" class="mt-5">
-                
-            </ul>
-        </div>
+            <h2 class="font-black text-3xl text-center">TO-DO LIST</h2>
+
+            <p class="text-lg mt-5 text-center mb-10">
+                Add task/notes
+                <span class="text-indigo-600 font-bold">and manage them</span>
+            </p>
+
+            <form 
+                id="notes-form"
+                class="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+            >
+                <div class="mb-5">
+                    <label for="title" class="block text-gray-700 uppercase font-bold text-sm">
+                        Title:
+                    </label>
+                    <input
+                        class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        type="text"
+                        id="title"
+                        placeholder="Task/Note Title"
+                        name="title"
+                    />  
+                </div>
+
+                <div class="mb-5">
+                    <label for="description" class="block text-gray-700 uppercase font-bold text-sm">
+                        Description:
+                    </label>
+                    <input
+                        class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        type="text"
+                        id="description"
+                        placeholder="Task/Note Description"
+                        name="description"
+                    />  
+                </div>
+
+                <input
+                    type="submit"
+                    class="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+                    value='Add task/note'
+                />
+              </form>
+          </div>
 
         <div class="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
-              <h2 class="font-black text-3xl text-center">Listado Pacientes</h2>
+              <h2 class="font-black text-3xl text-center">Task list</h2>
               <p class="text-xl mt-5 mb-10 text-center">
-                  Administra tus
-                  <span class="text-indigo-600 font-bold ">Pacientes y Citas</span>
+                  Manage your Tasks and Notes
+                  <span class="text-indigo-600 font-bold ">Tasks and Notes</span>
               </p>
-              <div id="citas">
-                  <p class="text-xl mt-5 mb-10 text-center">No Hay Pacientes</p>
+              <div id="notes">
+                  <p class="text-xl mt-5 mb-10 text-center">No Tasks Available</p>
               </div>
           </div>
     </section>
     
-    <script src="js/app.js"></script>
+    <script src="js/app.js" type="module"></script>
 </body>
 </html>
