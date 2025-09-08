@@ -1,6 +1,6 @@
 "use strict";
 
-export let editando = {
+export let editing = {
     value: false
 }
 

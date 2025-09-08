@@ -19,7 +19,7 @@ export function initDB() {
     }
 
     request.onerror = function () {
-    alert("Error connecting to the database. Please reacharge the page.");
+        alert("Error connecting to the database. Please reacharge the page.");
     };
 
     request.onsuccess = function() {
