@@ -1,14 +1,16 @@
 "use strict";
 
-import { descriptionInput, titleInput } from "./selectors.js";
+import { initDB } from "./db.js";
+import { newNote, notesData } from "./functions.js";
+import { descriptionInput, form, titleInput } from "./selectors.js";
 
-window.addEventListener('DOMContentLoaded', ()=> {
+window.onload = ()=> {
+   
+    initDB();
 
-    titleInput.addEventListener('change', noteData);
-    descriptionInput.addEventListener('change', noteData);
+    titleInput.addEventListener('change', notesData);
+    descriptionInput.addEventListener('change', notesData);
 
-});
-
-function noteData(e) {
-    console.log(`Value: ${e.target.value}, Input: ${e.target.name}.`);
+    form.addEventListener('submit', newNote);
+    
 }
