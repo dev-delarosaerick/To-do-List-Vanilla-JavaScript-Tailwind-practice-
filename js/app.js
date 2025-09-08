@@ -1,14 +1,16 @@
 "use strict";
 
 import { initDB } from "./db.js";
-import { notesData } from "./functions.js";
-import { descriptionInput, titleInput } from "./selectors.js";
+import { newNote, notesData } from "./functions.js";
+import { descriptionInput, form, titleInput } from "./selectors.js";
 
 window.onload = ()=> {
+   
+    initDB();
 
     titleInput.addEventListener('change', notesData);
     descriptionInput.addEventListener('change', notesData);
-    
-    initDB();
 
+    form.addEventListener('submit', newNote);
+    
 }
